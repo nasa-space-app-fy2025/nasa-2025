@@ -438,7 +438,7 @@ export default function NBLQuiz() {
       </div>
 
       <Link
-  to="/"
+  to="/nbl"
   aria-label="Return to introduction page"
   className="absolute top-4 left-4 z-50 flex h-10 w-10 items-center justify-center rounded-full border border-cyan-300/25 bg-blue-900/20 text-cyan-200 backdrop-blur-sm transition-all hover:scale-105 hover:bg-blue-800/40"
 >

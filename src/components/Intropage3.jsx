@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useLayoutEffect } from "react";
-import MenuButton from "./MenuButton.jsx"; 
+import MenuButton from "./MenuButton.jsx";
 import SideMenu from "./SideMenu.jsx";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap";
@@ -374,53 +374,56 @@ const IntroPage = () => {
       {/* ... (Hero, Divider, "What is NBL?" sections ) ... */}
 
       <div
-  
-  className="relative flex flex-col items-center justify-center h-screen overflow-hidden"
->
-  
-  <video
-    autoPlay
-    loop
-    muted
-    
-    className="absolute inset-0 w-full h-full object-cover"
-  >
-    <source src="/nbl-pool.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
 
-  <div className="absolute inset-0 bg-black opacity-70"></div>
-
-  <div
-    className={`relative z-10 flex flex-col items-center p-8 transition-opacity duration-1000 ${
-      showContent ? "opacity-100" : "opacity-0"
-    }`}
-  >
-    <h1 className="text-4xl md:text-7xl font-bold tracking-tight text-center relative z-20">
-      <span
-        className="text-transparent bg-clip-text"
-        style={{
-          backgroundImage:
-            "linear-gradient(120deg, #FFFFFF, #E0F2FE, #BFDBFE)",
-        }}
+        className="relative flex flex-col items-center justify-center h-screen overflow-hidden"
       >
-        NEUTRAL BUOYANCY LABORATORY
-      </span>
-    </h1>
-    <p className="text-lg md:text-2xl mt-4 text-center text-gray-200 max-w-2xl italic font-light">
-      Training in a Fluid Universe
-    </p>
-    <button
-      onClick={handleExploreClick}
-      className="mt-12 px-8 py-3 bg-transparent border-2 border-blue-300 text-blue-300 text-lg rounded-full font-medium transition-colors duration-300 hover:bg-blue-300 hover:text-gray-900 relative overflow-hidden group"
-    >
-      <span className="relative z-10">EXPLORE THE NBL</span>
-      <span className="absolute inset-0 w-full h-full rounded-full transition-all duration-500 transform scale-0 group-hover:scale-150 bg-blue-300 opacity-0 group-hover:opacity-20"></span>
-    </button>
-  </div>
-</div>
 
-      
+        <video
+          autoPlay
+          loop
+          muted
+
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/nbl-pool.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        <div className="absolute inset-0 bg-black opacity-70"></div>
+
+        <div
+          className={`relative z-10 flex flex-col items-center p-8 transition-opacity duration-1000 ${showContent ? "opacity-100" : "opacity-0"
+            }`}
+        >
+          <h1 className="text-4xl md:text-7xl font-bold tracking-tight text-center relative z-20">
+            <span
+              className="text-transparent bg-clip-text"
+              style={{
+                backgroundImage:
+                  "linear-gradient(120deg, #FFFFFF, #E0F2FE, #BFDBFE)",
+              }}
+            >
+              NEUTRAL BUOYANCY LABORATORY
+            </span>
+          </h1>
+          <p className="text-lg md:text-2xl mt-4 text-center text-gray-200 max-w-2xl italic font-light">
+            Training in a Fluid Universe
+          </p>
+          <button
+            onClick={handleExploreClick}
+            className="mt-12 px-8 py-3 bg-transparent border-2 border-blue-300 text-blue-300 text-lg rounded-full font-medium transition-colors duration-300 hover:bg-blue-300 hover:text-gray-900 relative overflow-hidden group"
+          >
+            <span className="relative z-10">EXPLORE THE NBL</span>
+            <span className="absolute inset-0 w-full h-full rounded-full transition-all duration-500 transform scale-0 group-hover:scale-150 bg-blue-300 opacity-0 group-hover:opacity-20"></span>
+          </button>
+        </div>
+        {/* AI Generated Video Notice */}
+        <p className="absolute bottom-4 right-4 z-10 text-white font-light text-xs opacity-75">
+          This video is AI-generated.
+        </p>
+      </div>
+
+
 
       <div id="nbl-intro-section" className="py-10 px-8 lg:px-24">
         <div className="flex flex-col lg:flex-row items-center lg:space-x-12">
@@ -496,17 +499,17 @@ const IntroPage = () => {
         </div>
       </div>
 
-      
+
 
       <section
-  id="nbl-history-section"
-  ref={timelineWrapperRef}
-  className="relative h-screen bg-cover bg-center bg-fixed"
-  style={{
-    backgroundImage:
-      'linear-gradient(rgba(17, 24, 39, 0.5), rgba(17, 24, 39, 0.5)), url("/nbl-bg.jpg")', // Opacity reduced from 0.95 to 0.5
-  }}
->
+        id="nbl-history-section"
+        ref={timelineWrapperRef}
+        className="relative h-screen bg-cover bg-center bg-fixed"
+        style={{
+          backgroundImage:
+            'linear-gradient(rgba(17, 24, 39, 0.5), rgba(17, 24, 39, 0.5)), url("/nbl-bg.jpg")', // Opacity reduced from 0.95 to 0.5
+        }}
+      >
         <div
           ref={horizontalScrollRef}
           className="flex h-full"
@@ -572,9 +575,8 @@ const IntroPage = () => {
           {nblTimelineData.map((_, index) => (
             <div
               key={index}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                activeSlide === index ? "bg-blue-400 scale-125" : "bg-gray-600"
-              }`}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${activeSlide === index ? "bg-blue-400 scale-125" : "bg-gray-600"
+                }`}
             />
           ))}
         </div>
@@ -796,7 +798,7 @@ const IntroPage = () => {
 
       <section
         id="nbl-training-section"
-        className="relative bg-gray-900" 
+        className="relative bg-gray-900"
       >
         <div ref={trainingSectionRef} className="h-[180vh]">
           <div
@@ -861,7 +863,7 @@ const IntroPage = () => {
       </section>
 
       <Link
-        to="/quiz"
+        to="/nbl-quiz"
         className="fixed bottom-8 right-8 z-40 group"
         aria-label="Initiate Simulation"
       >
@@ -952,6 +954,31 @@ const IntroPage = () => {
           </button>
         </div>
       )}
+      <a
+        href="src/_nbl/index.html"
+        className="fixed bottom-8 left-8 z-50 px-6 py-3 text-white font-bold text-sm uppercase rounded-full shadow-2xl transition-all duration-300"
+        style={{
+          background: "linear-gradient(135deg, #1e3a8a, #7e22ce, #ec4899)",
+          boxShadow:
+            "0 0 15px rgba(139, 92, 246, 0.8), 0 0 30px rgba(139, 92, 246, 0.5)",
+          animation:
+            "floatPulse 2.5s ease-in-out infinite, pulseGlow 3s ease-in-out infinite",
+        }}
+      >
+        PLAY GAME
+        <style>
+          {`
+            @keyframes floatPulse {
+              0%, 100% { transform: translateY(0) scale(1); }
+              50% { transform: translateY(-6px) scale(1.05); }
+            }
+            @keyframes pulseGlow {
+              0%, 100% { box-shadow: 0 0 15px rgba(139, 92, 246, 0.8), 0 0 30px rgba(139, 92, 246, 0.5); }
+              50% { box-shadow: 0 0 25px rgba(139, 92, 246, 1), 0 0 50px rgba(139, 92, 246, 0.7); }
+            }
+          `}
+        </style>
+      </a>
     </div>
   );
 };
