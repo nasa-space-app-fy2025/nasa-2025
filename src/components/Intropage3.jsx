@@ -955,7 +955,7 @@ const IntroPage = () => {
         </div>
       )}
       <a
-        href="src/_nbl/index.html"
+        href="/_nbl/index.html"
         className="fixed bottom-8 left-8 z-50 px-6 py-3 text-white font-bold text-sm uppercase rounded-full shadow-2xl transition-all duration-300"
         style={{
           background: "linear-gradient(135deg, #1e3a8a, #7e22ce, #ec4899)",
